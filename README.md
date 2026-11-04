@@ -30,8 +30,6 @@ The tables may be empty or contain a large amount of data. The database and all 
 
 1. Run `PamigayApp.java`.
 2. When prompted for the MySQL connection details, enter:
-
-   | Setting | Value |
    | --- | --- |
    | Host | `localhost` |
    | Port | `3306` |
