@@ -1,27 +1,40 @@
-Guide for USERS of this app. 
+# User Guide
 
-1. The MySQL database must be named: pamigay_db AND It must contain these eight tables strictly:
-                                                                          district
-                                                                          barangay
-                                                                          beneficiary
-                                                                          staff
-                                                                          crisis
-                                                                          payout
-                                                                          receipt
-                                                                          announcement
+## Database requirements
 
-This is required for the app to run. The tables may be empty or may contain a millions amount of data.
-As long as the database exists and all eight tables are present, the app will run fully.
+The application requires a MySQL database named `pamigay_db` with these eight tables:
 
-2. Open XAMPP , then Click the 'START' button for MySQL
-3. Then make sure your MySQL Workbench is running
-   try this query: (it must show the eight tables in number 1)
-     USE pamigay_db;
-     SHOW TABLES;
-4. Run the application (PamigayApp.java)
-5. When the app opens, enter:
-    Host: localhost
-    Port: 3306
-    Database: pamigay_db
-    Username: root (root is default)
-    Password:  (no need if you entered none before)
+- `district`
+- `barangay`
+- `beneficiary`
+- `staff`
+- `crisis`
+- `payout`
+- `receipt`
+- `announcement`
+
+The tables may be empty or contain a large amount of data. The database and all eight tables must exist for the application to run.
+
+## Start MySQL and verify the tables
+
+1. Open XAMPP and click **Start** next to **MySQL**.
+2. Open MySQL Workbench and connect to your local MySQL server.
+3. Run these queries to check that the database contains all eight tables:
+
+   ```sql
+   USE pamigay_db;
+   SHOW TABLES;
+   ```
+
+## Run the application
+
+1. Run `PamigayApp.java`.
+2. When prompted for the MySQL connection details, enter:
+
+   | Setting | Value |
+   | --- | --- |
+   | Host | `localhost` |
+   | Port | `3306` |
+   | Database | `pamigay_db` |
+   | Username | `root` (the default XAMPP username) |
+   | Password | Leave blank if you have not set a MySQL password |
